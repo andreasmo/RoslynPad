@@ -165,8 +165,8 @@ namespace RoslynPad.Roslyn.SignatureHelp
 
                 // If we don't have an item that can take that number of parameters, then just pick
                 // the last item.  Or stick with the current item if the last item isn't any better.
-                var lastItem = filteredItems.Last();
-                if (currentItem.IsVariadic || currentItem.Parameters.Length == lastItem.Parameters.Length)
+                var lastItem = filteredItems.LastOrDefault();
+                if (lastItem == null || currentItem == null || currentItem.IsVariadic || currentItem.Parameters.Length == lastItem.Parameters.Length)
                 {
                     return;
                 }

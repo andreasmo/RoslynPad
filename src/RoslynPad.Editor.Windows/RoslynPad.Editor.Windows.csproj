@@ -6,6 +6,7 @@
     <RootNamespace>RoslynPad.Editor</RootNamespace>
     <Version>$(EditorPackageVersion)</Version>
     <Description>Provides a Roslyn-based code editor using AvalonEdit (WPF platform) with completion, diagnostics, and quick actions</Description>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -23,7 +24,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="5.0.4" />
-    <PackageReference Include="System.Reactive.Linq" Version="4.1.2" />
+    <PackageReference Include="System.Reactive.Linq" Version="4.3.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\RoslynPad.Editor.Shared\**\*.cs">
